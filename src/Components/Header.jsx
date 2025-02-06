@@ -1,10 +1,16 @@
 const Header = () => {
   return (
-    <div className="flex justify-between mt-5 mx-[70px]  items-center">
+    <div className="flex justify-between mt-5 mx-[70px]  items-center ">
       <div className="">
         <img alt="Logo" src="Logo.svg" />
       </div>
-      <div>
+      <div className="sm:hidden flex items-center justify-center gap-2.5 w-7 h-7 bg-[#F1F1F1] rounded-[70px]">
+        <img className=" w-3 h-3" alt="search-logo" src="i13mini-search-icon.svg"/>
+      </div>
+      <div className="sm:hidden">
+        <img alt="menu" src="i13mini-menu.svg"/>
+      </div>
+      <div className="hidden sm:block">
         <div className="bg-[#F1F1F1] w-125 h-13 rounded-[80px] flex  items-center search shadow-[0px_5px_6px_-1px_rgba(0,0,0,0.1)]">
           <img
             alt="search"
@@ -19,7 +25,7 @@ const Header = () => {
           />
         </div>
       </div>
-      <nav className="w-108 h-13 rounded-[80px] bg-[#F1F1F1] py-2.5 px-10 gap-12 cursor-pointer shadow-[0px_5px_6px_-1px_rgba(0,0,0,0.1)]">
+      <nav className="w-108 h-13 rounded-[80px] bg-[#F1F1F1] py-2.5 px-10 gap-12 cursor-pointer shadow-[0px_5px_6px_-1px_rgba(0,0,0,0.1)] hidden sm:block">
         <ul className="flex justify-between text-lg text-[#131313] ">
           <li className="nav-1  font-bold">Home</li>
           <li>Olympiad</li>
@@ -27,7 +33,8 @@ const Header = () => {
           <li>CUET</li>
         </ul>
       </nav>
-      <button className=" text-[18px] w-24 h-8 rounded-[50px] py-[3px] px-[15px] bg-[#FBC108] flex items-center ">
+      
+      <button className=" text-[18px] w-24 h-8 rounded-[50px] py-[3px] px-[15px] bg-[#FBC108] flex items-center hidden sm:block ">
        Login <span className="pl-2"> <img alt="logo" src="login-img.svg" /> </span>
       </button>
     </div>

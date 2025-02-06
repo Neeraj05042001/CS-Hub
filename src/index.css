@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
-ul > li {
+/* nav>ul > li {
   display: inline-block;
   position: relative;
   color: #131313;
   text-decoration: none;
   padding-bottom: 4px;
 }
-ul > li:hover {
+nav>ul > li:hover {
   font-weight: 700;
 }
 
-ul > li::after {
+nav>ul > li::after {
   content: "";
   position: absolute;
   width: 0;
@@ -23,7 +23,38 @@ ul > li::after {
   transition: width 0.3s ease-in-out;
 }
 
-ul > li:hover::after {
+nav>ul > li:hover::after {
+  width: 100%;
+}
+
+.nav-1::before{
+ font-weight: 700;
+} */
+
+.nav-items>li {
+  display: inline-block;
+  position: relative;
+  color: #131313;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+.nav-items>li:hover {
+  font-weight: 700;
+}
+
+.nav-items>li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fbc108;
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-items> li:hover::after {
   width: 100%;
 }
 
